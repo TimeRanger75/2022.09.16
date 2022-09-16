@@ -18,6 +18,26 @@ public class Pont {
         this.y= koordinataGeneralasa(n);
     }
 
+    public int getX(int x){
+       return x;
+    }
+    public  void setX(){
+        this.x=x;
+    }public int getY(int y){
+       return y;
+    }
+    public  void setY(){
+        this.y=y;
+    }
+
+    public  double getTavolsagAzOrigotol(){
+        return Math.sqrt(Math.pow(this.x,2)+Math.pow(this.y,2));
+    }
+
+    public double tavolsag(Pont masikPont){
+        return Math.sqrt(Math.pow(this.x- masikPont.x,2)+Math.pow(this.y- masikPont.y,2));
+    }
+
     private int koordinataGeneralasa(int n) {
         return (int) (Math.random() * (2 * n + 1)) - n;
     }

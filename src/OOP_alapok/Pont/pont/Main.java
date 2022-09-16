@@ -10,6 +10,15 @@ public class Main {
 
         System.out.println(p1);
         System.out.println(p2);
-        System.out.println(p3);
+        System.out.printf("A  %s pont távolsága az origótól %.3f",p3, p3.getTavolsagAzOrigotol());
+        System.out.printf("A  %s pont távolsága az %s ponttól %.3f",p2,p3, p2.tavolsag(p3));
+        
+        Pont pontok[]=new Pont[100];
+        for (int i = 0; i < pontok.length; i++) {
+            pontok[i]=new Pont(15);
+        }
+        for (Pont p:pontok) {
+            System.out.println(p);
+        }
     }
 }
