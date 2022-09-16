@@ -20,5 +20,14 @@ public class Main {
         for (Pont p:pontok) {
             System.out.println(p);
         }
+
+        int legtavolabbIndex=0;
+        for (int i = 1; i < pontok.length; i++) {
+            if (pontok[legtavolabbIndex].getTavolsagAzOrigotol()<pontok[i].getTavolsagAzOrigotol()){
+                legtavolabbIndex=i;
+            }
+        }
+        System.out.printf("Az origótól legtávolabb a %d áll. A pont a: %s távolsága az origótól: %3.f",
+                (legtavolabbIndex+1),pontok[legtavolabbIndex],pontok[legtavolabbIndex].getTavolsagAzOrigotol());
     }
 }
