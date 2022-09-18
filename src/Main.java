@@ -1,5 +1,3 @@
-package OOP_alapok.Pont.pont;
-
 import OOP_alapok.Pont.pont.Pont;
 
 public class Main {
@@ -7,6 +5,10 @@ public class Main {
         Pont p1=new Pont();
         Pont p2=new Pont(3,6);
         Pont p3=new Pont(100);
+        Pont p4=new Pont(16,0);
+        Pont p5=new Pont(0,32);
+        Pont p6=new Pont(0,0);
+
 
         System.out.println(p1);
         System.out.println(p2);
@@ -27,7 +29,11 @@ public class Main {
                 legtavolabbIndex=i;
             }
         }
-        System.out.printf("Az origótól legtávolabb a %d áll. A pont a: %s távolsága az origótól: %3.f",
-                (legtavolabbIndex+1),pontok[legtavolabbIndex],pontok[legtavolabbIndex].getTavolsagAzOrigotol());
+        System.out.printf("Az origótól legtávolabb a %d áll. A pont a: %s távolsága az origótól: %.3f", (legtavolabbIndex+1),pontok[legtavolabbIndex],pontok[legtavolabbIndex].getTavolsagAzOrigotol());
+
+        System.out.print("\nA "+p3+"pont a "+p3.melyikSiknegyed());
+        System.out.print("\nA "+p5+"pont a "+p5.melyikSiknegyed());
+        System.out.print("\nA "+p6+"pont a "+p6.melyikSiknegyed());
+
     }
 }

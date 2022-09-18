@@ -42,6 +42,23 @@ public class Pont {
         return (int) (Math.random() * (2 * n + 1)) - n;
     }
 
+    public String melyikSiknegyed(){
+        if (this.x>0 && this.y>0){
+            return "jobb felső síknegyedben helyezkedik el.";
+        } else if (this.x>0 && this.y<0) {
+            return "jobb alsó síknegyedben helyezkedik el.";
+        } else if (this.x<0 && this.y>0) {
+            return "bal felső síknegyedben helyezkedik el.";
+        } else if (this.x<0 && this.y<0) {
+            return "bal alsó síknegyedben helyezkedik el.";
+        } else if (this.x==0 && this.y<0 || this.y>0) {
+            return "Y tengelyen helyezkedik el.";
+        } else if (this.x<0 || this.x>0 && this.y==0) {
+            return  "X tengelyen helyezkedik el.";
+        }
+        return "Origón helyezkedik el.,";
+    }
+
     @Override
     public String toString() {
         return String.format("(%d,%d)",this.x,this.y);
